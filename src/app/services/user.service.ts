@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { User } from '../users/list-user/list-user.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,8 +11,8 @@ export class UserService {
   baseUrl: String = 'https://jsonplaceholder.cypress.io/';
   constructor(private http: HttpClient) { }
 
-  listUsers(){
-    return this.http.get(this.baseUrl + 'users');
+  listUsers(): Observable<User[]>{
+    return this.http.get<User[]>(this.baseUrl + 'users');
   }
   viewUsers(id: String){
     return this.http.get(this.baseUrl + 'users/' + id);

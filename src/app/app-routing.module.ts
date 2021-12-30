@@ -20,6 +20,10 @@ const routes: Routes = [
       { path: 'view/:id', component: ViewUserComponent},
       { path: 'create', component: AddUserComponent}
 ]},
+ 
+ 
+  
+  { path: 'roles', loadChildren: () => import('./roles/roles.module').then(m => m.RolesModule) },
 
 ];
 

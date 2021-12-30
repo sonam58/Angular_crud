@@ -3,12 +3,36 @@
     padding: 10px;
 }
 .list-users{
-    margin: 10px;
-    background-color: rgb(103, 226, 226);
+    margin: 40px;
+    background-color: rgb(201, 199, 209);
+    color: whitesmoke;
 }
 .username{
     min-width: 300px;
 }
 .material-icons{
-    color: rgb(99, 43, 43);
-    }
+    color: rgb(18, 18, 58);
+}
+
+table {
+    width:100%;
+    
+}
+.main-content{
+   color: rgb(48, 36, 53);
+   
+}
+.mat-elevation-z8{
+    // background-color: rgb(30, 58, 117);
+    background-color: rgb(229, 229, 243);
+    color: rgb(18, 18, 58);
+}
+.mat-cell{
+    color: rgb(18, 18, 58);
+}
+th{
+    background: rgb(64, 64, 121);
+}
+.mat-header-cell{
+    color: whitesmoke;
+}
