@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../users/list-user/list-user.component';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  private matDrawer! : MatDrawer;
   baseUrl: String = 'https://jsonplaceholder.cypress.io/';
+  
   constructor(private http: HttpClient) { }
 
   listUsers(): Observable<User[]>{
@@ -28,4 +31,11 @@ export class UserService {
   updateUser(id: any, userObj: any){
     return this.http.put(this.baseUrl + 'users/'+id , userObj);
   }
+
+ setDrawer(drawer: MatDrawer){
+   this.matDrawer = drawer;
+ }
+ toggle(){
+   this.matDrawer.toggle();
+ }
 }

@@ -1,3 +1,5 @@
+import { UserService } from 'src/app/services/user.service';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
+  constructor(private userService: UserService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  
+  toggleDrawer(){
+    this.userService.toggle();
   }
-
 }
