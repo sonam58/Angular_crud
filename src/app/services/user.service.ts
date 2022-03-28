@@ -10,8 +10,9 @@ import { MatDrawer } from '@angular/material/sidenav';
 export class UserService {
 
   private matDrawer! : MatDrawer;
-  baseUrl: String = 'https://jsonplaceholder.cypress.io/';
-  
+  // baseUrl: String = 'https://jsonplaceholder.cypress.io/';
+
+  baseUrl: String = 'http://localhost:3000/'
   constructor(private http: HttpClient) { }
 
   listUsers(): Observable<User[]>{
@@ -20,15 +21,15 @@ export class UserService {
   viewUsers(id: String){
     return this.http.get(this.baseUrl + 'users/' + id);
   }
-  addUser(userObj:any){
+  addUser(userObj:User){
     return this.http.post(this.baseUrl + 'users', userObj);
   }
 
-  deleteUser(id: any){
+  deleteUser(id: number){
     return this.http.delete(this.baseUrl + 'users/' + id);
   }
 
-  updateUser(id: any, userObj: any){
+  updateUser(id: number, userObj: User){
     return this.http.put(this.baseUrl + 'users/'+id , userObj);
   }
 

@@ -12,8 +12,10 @@ import { UserService } from 'src/app/services/user.service';
 export class EditUserComponent implements OnInit {
   dataLoaded: boolean = false;
   userId: any;
-  userDetails: any;
+  userDetails:any;
   editUserForm: FormGroup = new FormGroup({});
+
+
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService,
     private formBuilder: FormBuilder, private _snackBar : MatSnackBar) { }
 
@@ -36,7 +38,8 @@ export class EditUserComponent implements OnInit {
         //Build the edit form
 
         this.editUserForm = this.formBuilder.group({
-          'username': new FormControl(this.userDetails.name),
+          'name':new FormControl(this.userDetails.name),
+          'username': new FormControl(this.userDetails.username),
           'email': new FormControl(this.userDetails.email)
         })
         this.dataLoaded=true;

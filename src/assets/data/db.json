@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alka",
+      "username": "Alka123",
+      "email": "ALKA.3556@MAHALE.com"
+    },
+    {
+      "id": 2,
+      "name": "Amey",
+      "username": "APP",
+      "email": "amey.32r32@Patil.com"
+    },
+    {
+      "id": 3,
+      "name": "Bhupesh",
+      "username": "BR",
+      "email": "Bhupesh.2324@rajpurohit.com"
+    },
+    {
+      "id": 4,
+      "name": "Prasad",
+      "username": "PBP",
+      "email": "Prasad.2023@patil.com"
+    },
+    {
+      "id": 5,
+      "name": "Sonam",
+      "username": "shy",
+      "email": "sonam.me@yadav.com"
+    },
+    {
+      "id": 6,
+      "name": "Swar",
+      "username": "spk",
+      "email": "swar.123@kunwar.com"
+    },
+    {
+      "name": "pranil123",
+      "username": "prp",
+      "email": "pranil.vd@gmail.com",
+      "id": 7
+    }
+  ]
+}

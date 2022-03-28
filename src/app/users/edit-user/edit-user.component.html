@@ -1,13 +1,21 @@
-<mat-card>
-    <mat-card-title style="color: rgb(90, 32, 32);">Update User</mat-card-title>
-    <mat-card-content style="padding-top: 20px;">
+<mat-card class="editUsers">
+    <mat-card-title>Update user</mat-card-title>
+    <mat-card-content>
 <div *ngIf = "dataLoaded">
 <form [formGroup] = "editUserForm" (submit) = "updateUser()">
     <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName= "name">
+        <mat-icon matSuffix><span class="material-icons"> perm_identity</span></mat-icon>  
+      </mat-form-field>
+    
+    </p>
+    <p>
         <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Name" formControlName= "username">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>  
+          <mat-label>User name</mat-label>
+          <input matInput placeholder="User Name" formControlName= "username">
+          <mat-icon matSuffix><span class="material-icons"> perm_identity</span></mat-icon>  
         </mat-form-field>
       
       </p>
@@ -16,7 +24,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input matInput placeholder="Email Address" formControlName= "email">
-          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>  
+          <mat-icon matSuffix><span class="material-icons">mail</span></mat-icon>  
         </mat-form-field>
       
       </p>

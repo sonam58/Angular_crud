@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-user.component.scss']
 })
 export class DeleteUserComponent implements OnInit {
-  userId: String = "";
+  userId!: number;
   constructor(private activatedRoute : ActivatedRoute, private userService: UserService,
     private _snackBar: MatSnackBar) { }
 
